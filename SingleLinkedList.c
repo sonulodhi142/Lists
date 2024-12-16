@@ -60,6 +60,12 @@ void InsertInLast()
         }
     }
 }
+void random_insert(){
+    int i, loc, item;
+    struct node *ptr, *temp;
+    ptr = (struct node *)malloc(sizeof(struct node));
+    
+}
 
 int main(){
 
