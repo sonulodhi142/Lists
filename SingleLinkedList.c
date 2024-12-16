@@ -68,7 +68,26 @@ void randomInsert(){
     {
         printf("\nOVERFLOW");
     }
-   
+    else{
+        printf("Enter Value: ");
+        scanf("%d", &item);
+        ptr->data = item;
+        printf("\nEnter the location: ");
+        scanf("%d", &loc);
+        temp = head;
+        for (i = 1; i < loc; i++)
+        {
+            temp = temp->next;
+            if (temp == NULL)
+            {
+                printf("\ncan't insert\n");
+                return;
+            }
+        }
+        ptr->next = temp->next;
+        temp->next = ptr;
+        printf("Item inserted");
+    }
     
 }
 
