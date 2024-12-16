@@ -60,10 +60,15 @@ void InsertInLast()
         }
     }
 }
-void random_insert(){
+void randomInsert(){
     int i, loc, item;
     struct node *ptr, *temp;
     ptr = (struct node *)malloc(sizeof(struct node));
+    if (ptr == NULL)
+    {
+        printf("\nOVERFLOW");
+    }
+   
     
 }
 
