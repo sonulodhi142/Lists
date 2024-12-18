@@ -16,9 +16,9 @@ void InsertInLast();
 void randomInsert();
 void last_delete();
 void random_delete();
-// void display();
-// void begin_delete();
-// void search();
+void begin_delete();
+void display();
+void search();
 
 
 /*function for to insert a value in the start of the list*/
@@ -128,6 +128,21 @@ void last_delete(){
     
 }
 
+void random_delete(){
+
+}
+
+void begin_delete(){
+
+}
+
+void display(){
+
+}
+
+void search(){
+    
+}
 
 int main(){
 
