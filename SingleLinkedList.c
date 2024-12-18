@@ -129,7 +129,22 @@ void last_delete(){
 }
 
 void random_delete(){
-
+    struct node *ptr, *ptrl;
+    int loc, i;
+    printf("\n Enter the location: ");
+    scanf("%d", &loc);
+    ptr = head;
+    for (i = 0; i < loc; i++){
+        ptrl = ptr;
+        ptr = ptr->next;
+        if (ptr == NULL){
+            printf("\nCan't delete");
+            return;
+        }
+    }
+    ptrl->next = ptr->next;
+    free(ptr);
+    printf("Item deleted at loc %d", loc);
 }
 
 void begin_delete(){
@@ -141,7 +156,7 @@ void display(){
 }
 
 void search(){
-    
+
 }
 
 int main(){
