@@ -8,6 +8,19 @@ struct node{
 
 };
 struct node *head;
+
+// add all neccessary functions
+
+void InsertInStart();
+void InsertInLast();
+void randomInsert();
+void last_delete();
+void random_delete();
+// void display();
+// void begin_delete();
+// void search();
+
+
 /*function for to insert a value in the start of the list*/
 void InsertInStart(){
     struct node *ptr;
@@ -91,21 +104,17 @@ void randomInsert(){
     
 }
 
-void last_delete()
-{
+void last_delete(){
     struct node *ptr, *ptrl;
-    if (head == NULL)
-    {
+    if (head == NULL){
         printf("\nList is empty");
     }
-    else if (head->next == NULL)
-    {
+    else if (head->next == NULL){
         head = NULL;
         free(head);
         printf("\nOnly node of the list deleted ..\n");
     }
-    else
-    {
+    else{
         ptr = head;
         while (ptr->next != NULL)
         {
@@ -118,6 +127,7 @@ void last_delete()
     }
     
 }
+
 
 int main(){
 
