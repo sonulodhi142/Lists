@@ -98,6 +98,24 @@ void last_delete()
     {
         printf("\nList is empty");
     }
+    else if (head->next == NULL)
+    {
+        head = NULL;
+        free(head);
+        printf("\nOnly node of the list deleted ..\n");
+    }
+    else
+    {
+        ptr = head;
+        while (ptr->next != NULL)
+        {
+            ptrl = ptr;
+            ptr = ptr->next;
+        }
+        ptrl->next = NULL;
+        free(ptr);
+        printf("Item deleted\n");
+    }
     
 }
 
