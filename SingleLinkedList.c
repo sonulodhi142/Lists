@@ -91,6 +91,16 @@ void randomInsert(){
     
 }
 
+void last_delete()
+{
+    struct node *ptr, *ptrl;
+    if (head == NULL)
+    {
+        printf("\nList is empty");
+    }
+    
+}
+
 int main(){
 
     InsertInStart();
