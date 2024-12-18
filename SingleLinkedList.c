@@ -161,8 +161,49 @@ void search(){
 
 int main(){
 
-    InsertInStart();
-    InsertInLast();
+    
+    int choice = 0;
+    while (choice != 9)
+    {
+        printf("\n...Choose One Option from the following List...\n");
+        printf("\nl.Insert in begining\n2.Insert at last\n3.Insert item at any location\n4.Delete from Beginning\n5.Delete from last\n6.Delete item from any location\n7.Search\n8.Show\n9.Exit\n");
+
+        printf("\nEnter your choice: ");
+        scanf("\n%d", &choice); // choice=1
+
+        switch (choice)
+        {
+        case 1:
+            InsertInStart();
+            break;
+        case 2:
+            InsertInLast();
+            break;
+        case 3:
+            randomInsert();
+            break;
+        case 4:
+            begin_delete();
+            break;
+        case 5:
+            last_delete();
+            break;
+        case 6:
+            random_delete();
+            break;
+        case 7:
+            search();
+            break;
+        case 8:
+            display();
+            break;
+        case 9:
+            exit(0);
+            break;
+        default:
+            printf("Invalid Choice..");
+        }
+    }
 
     return 0;
 }
