@@ -148,6 +148,16 @@ void random_delete(){
 }
 
 void begin_delete(){
+    struct node *ptr;
+    if (head == NULL){
+        printf("\nList is empty\n");
+    }
+    else{
+        ptr = head;
+        head = ptr->next;
+        free(ptr);
+        printf("Item deleted from the begining ...\n");
+    }
 
 }
 
