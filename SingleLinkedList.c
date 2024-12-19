@@ -162,7 +162,19 @@ void begin_delete(){
 }
 
 void display(){
-
+    struct node *ptr;
+    ptr = head;
+    if (ptr == NULL){
+        printf("Nothing to print");
+    }
+    else{
+        printf("\nPrinting values while (ptr!=NULL).\n");
+        while (ptr != NULL)
+        {
+            printf("%d\n", ptr->data);
+            ptr = ptr->next;
+        }
+    }
 }
 
 void search(){
