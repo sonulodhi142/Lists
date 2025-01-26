@@ -80,6 +80,30 @@ void insert_at_tail(list *lp, item_type x){
     }
 }
 
+void insert_after_given(list *lp, node *given, item_type x){
+    if(lp->start==NULL){
+        printf("list is empty \n");
+    }
+    else{
+        node *newp, *p;
+        for(p=lp->start; p->data != given->data && p != NULL; p=p->next);
+        given = p;
+        if(given == NULL){
+            printf("item not found \n");
+        }
+        else if (given == lp->end)
+        {
+            insert_at_tail(lp, x);
+        }
+        else{
+            newp = create_node(x);
+            newp->next = given->next;
+            given->next =newp;
+        }
+        
+    }
+}
+
 int main()
 {
     list *lp = (list *)malloc(sizeof(list)); // Allocate memory for the list
