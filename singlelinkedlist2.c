@@ -28,6 +28,28 @@ node *create_node(item_type x){
     return p;
 }
 
+void intialize(list *lp){
+
+    lp->start = NULL;
+    lp->end = NULL;
+
+}
+
+void display(list *lp){
+
+    node *p;
+    p = lp->start;
+
+    while (p != NULL)
+    {
+        printf('%d /n', p->data);
+
+        p = p->next;
+    }
+    
+
+}
+
 
 
 
