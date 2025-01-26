@@ -52,7 +52,7 @@ void display(list *lp)
     }
 }
 
-void insert_head(list *lp, item_type x){
+void insert_at_head(list *lp, item_type x){
     node *newp;
     newp = create_node(x);
     
@@ -66,6 +66,20 @@ void insert_head(list *lp, item_type x){
     }
 }
 
+void insert_at_tail(list *lp, item_type x){
+    node *newp;
+    newp = create_node(x);
+    
+    if(lp->start == NULL){
+        lp->start = newp;
+        lp->end = newp;
+    }
+    else{
+    lp->end->next = newp;
+    lp->end = newp;   
+    }
+}
+
 int main()
 {
     list *lp = (list *)malloc(sizeof(list)); // Allocate memory for the list
@@ -75,10 +89,11 @@ int main()
         return 1;
     }
     intialize(lp);
-    insert_head(lp, 55);
-    insert_head(lp, 2);
-    insert_head(lp, 3);
-    insert_head(lp, 4);
+    insert_at_head(lp, 55);
+    insert_at_head(lp, 2);
+    insert_at_head(lp, 3);
+    insert_at_head(lp, 4);
+    insert_at_tail(lp, 100);
     display(lp);
 
     return 0;
